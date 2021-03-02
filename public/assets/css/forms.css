@@ -1,0 +1,107 @@
+/* Forms */
+.forms{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #1f1e2e;
+}
+.forms img{
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	top: 50%;
+	left: 22%;
+	margin-top: -125px;
+}
+.dialog{
+	width: 35%;
+	height: auto;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 50px;
+	background-color: #ffffff;
+	overflow-y: scroll;
+}
+.dialog h1{
+	color: #2d2d30;
+}
+.dialog input,
+.dialog select{
+	width: 80%;
+	height: auto;
+	border: 1.5px #cecece solid;
+	border-radius: 5px;
+	background-color: #ffffff;
+	padding: 10px;
+	color: #2d2d30;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+}
+.dialog select{
+	width: 85%;
+	margin-left: 8%;
+}
+.dialog input[type=checkbox]{
+	width: auto;
+	margin-left: 7.5%;
+	margin-right: 15px;
+	margin-top: 5px;
+	display: inline-block;
+}
+.forms .dialog input,
+.forms .dialog button{
+	margin-top: 25px;
+}
+.dialog .btn-pr{
+	width: 60%;
+	border: 0;
+	color: #ffffff;
+	background-color: #1f1e2e;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.dialog a{
+	text-align: center;
+	text-decoration: none;
+	margin-top: 5px;
+}
+.form-check{
+	width: 80%;
+	margin: auto;
+	align-items: center;
+	text-align: center;
+}
+.form-check-label{
+	display: inline;
+}
+.form-check-input{
+	width: auto !important;
+	display: inline-block;
+	margin: 0;
+}
+@media screen and (max-width: 768px){
+	.dialog{
+		width: 100%;
+		top: 20%;
+		padding-top: 10px;
+		overflow-y: scroll;
+	}
+	.forms img{
+		width: 130px;
+		height: 130px;
+		top: 10px;
+		left: 50%;
+		margin-left: -65px;
+		margin-top: 0;
+	}
+	.dialog input,
+	.dialog a,
+	.dialog button{
+		font-size: 15px;
+	}
+}

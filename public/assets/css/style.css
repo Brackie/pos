@@ -1,0 +1,256 @@
+/* Navbar */
+.navbar{
+	width: 82%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+	padding: 0;
+	z-index: 999;
+}
+.nav-container{
+	width: 100%;
+	height: auto;
+}
+.nav-toggle{
+	position: absolute;
+	left: 15px;
+	top: 12px;
+	display: none;
+}
+.nav-toggle span{
+	font-size: 25px;
+	color: #191d52;
+}
+.navbar a{
+	text-decoration: none;
+	font-family: 'Abril Fatface', cursive;
+}
+.nav-brand h1{
+	width: auto;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+	font-weight: 600;
+}
+.nav-brand h1 span{
+	font-size: 18px;
+}
+.nav-link{
+	color: #ffffff !important;
+	padding: 0;
+}
+.dropdown .nav-link{
+	color: #2d2d30 !important;
+}
+.nav-side{
+	width: 18%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #1f1e2e;
+	text-align: left;
+	padding: 100px 0 0 0;
+	box-shadow: 0px 5px 4px 2px rgba(0, 0, 0, 0.5);
+	z-index: 0;
+}
+.nav-side #close-sidenav{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 25px;
+	color: #ffffff;
+	display: none;
+}
+.nav-side ul{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.nav-side ul>li{
+	width: 85%;
+	margin: auto;
+	margin-bottom: 12px;
+}
+.nav-side ul>li>a{
+	width: auto;
+	height: auto;
+	color: #ffffff;
+	font-size: 16px;
+	margin-bottom: 30px;
+	opacity: 0.5;
+	text-decoration: none;
+}
+.nav-side ul>li>a>span{
+	margin-right: 15px;
+}
+.nav-side ul>li .active,
+.nav-side ul>li>a:hover{
+	opacity: 1;
+	transition: opacity .5s ease;
+}
+.navbar .dropdown{
+	position: absolute;
+	right: 10px;
+	top: 12px;
+}
+.navbar .dropdown-toggle{
+	margin-top: 2px;
+}
+.navbar .dropdown span{
+	font-weight: normal;
+	font-style: normal;
+}
+.navbar .dropdown-toggle:hover{
+	color: #191d52;
+}
+.dropdown-menu{
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 30px;
+	left: unset;
+	right: 0;
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 10px 20px;
+	box-shadow: 0px 5px 4px 2px rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 999;
+}
+.dropdown-menu a{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 16px;
+	text-decoration: none;
+}
+/* Table */
+.table{
+	width: 100%;
+	line-height: 1;
+	padding: 0;
+}
+.thead .tdata{
+	margin: 0;
+	padding: 0;
+	font-family: 'Abril Fatface', cursive;
+}
+.table .trow{
+	width: 95%;
+	margin: auto;
+	display: flex;
+	position: relative;
+	padding: 15px 0 15px 0;
+}
+.table .tbody .trow:nth-child(odd){
+	background: #f5f5f5;
+	box-shadow: inset 0 0 4px 1px rgba(0, 0, 0, 0.2);
+}
+.table .tdata{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.table .tdata span{
+	margin: 0 10px;
+}
+.sales .table .tdata span{
+	margin: 0;
+	margin-left: -3px;
+}
+.trow img{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	margin-top: -12px;
+}
+.dropdown-menu input{
+	width: auto;
+	height: 20px;
+	margin: auto;
+	margin-bottom: 5px;
+	border: 0;
+	border-radius: 3px;
+	color: #ffffff;
+	background-color: #1f1e2e;
+}
+
+@media screen and (min-width: 900px){
+	.nav-side{
+		width: 18%;
+		display: block;
+	}
+}
+@media screen and (max-width: 900px){
+	.navbar{
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	.nav-toggle{
+		display: block;
+	}
+	.nav-brand h1{
+		left: 48%;
+		top: 8px;
+		font-size: 22px;
+	}
+	.nav-brand h1 span{
+		font-size: 13px;
+	}
+	.dropdown-toggle{
+		margin-top: 5px;
+	}
+	.nav-side #close-sidenav{
+		display: block;
+	}
+	.nav-side{
+		width: 50%;
+		display: none;
+	}
+	.table{
+		overflow-x: scroll;
+	}
+	.table .tdata{
+		font-size: 11.5px;
+		margin-right: 10px;
+	}
+}
+@media screen and (max-width: 400px){
+	.nav-side{
+		width: 80%;
+	}
+	.nav-side #sales{
+		display: none;
+	}
+	.nav-brand h1{
+		left: 45%;
+	}
+	.nav-brand h1 span{
+		font-size: 10px;
+	}
+	.dropdown #username{
+		font-size: 11px;
+	}
+	.table{
+		padding: 0 10px;
+	}
+	.table .trow{
+		width: 130%;
+	}
+	.table .tdata img{
+		width: 28px;
+		height: 28px;
+	}
+}

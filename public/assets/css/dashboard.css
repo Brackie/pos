@@ -1,0 +1,95 @@
+/* Dashboard */
+.dashboard{
+	width: 100%;
+	height: auto;
+}
+.dashboard h2{
+	font-size: 16px;
+	text-align: left;
+	margin-left: 8px;
+}
+.dashboard p{
+	font-family: Nunito;
+}
+.charts .chart-item,
+.recent-item,
+.averages-item{
+	width: 100%;
+	height: auto;
+	background: #ffffff;
+	padding: 15px 0;
+	/* border-radius: 3px; */
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.dashboard h3,
+.averages-item p,
+.chart-item p,
+.chart-item .chart-container,
+.recents .recents-item{
+	width: 90%;
+	margin: auto;
+}
+.averages{
+	margin-bottom: 30px;
+}
+.averages-item{
+	background-color: #ffffff; 
+	line-height: 1.6;
+}
+.averages-item span{
+	font-size: 20px;
+	margin-left: 5%;
+}
+.averages-item h3{
+	font-size: 26px;
+	font-family: 'Ultra', cursive;
+}
+.averages-item p{
+	font-size: 17px;
+}
+.chart-item .chart-container{
+	margin-top: 20px;
+}
+.recents{
+	padding: 50px 0;
+}
+.recent-item{
+	width: 100%;
+	padding: 10px 0;
+}
+.recent-item h3{
+	width: auto;
+	margin-left: 8px;
+	margin-bottom: 5px;
+}
+.recents .table .trow{
+	padding: 15px 0 8px 0;
+	border-top: 1px #f5f5f5 solid;
+}
+.recents .table .tbody .trow:nth-child(odd){
+	background: #ffffff;
+	box-shadow: unset;	
+}
+.recents .tdata:nth-child(1){
+	flex: 10%; 
+	text-align: center;
+}
+.recents .tdata:nth-child(1) span{
+	background-color: rgba(55, 190, 2, 1);
+	color: #ffffff;
+	padding: 5px;
+	border-radius: 3px;
+	margin-top: -5px;
+}
+.recents .suppliers .tdata:nth-child(1) span{
+	background-color: rgba(0, 19, 92, 0.7);
+}
+.recents .tdata:nth-child(2){
+	flex: 30%; 
+}
+.recents .tdata:nth-child(3){
+	flex: 30%;
+}
+.recents .tdata:nth-child(4){
+	flex: 30%; 
+}

@@ -1,0 +1,155 @@
+/* Sales */
+.navbar{
+	width: 100%;
+}
+.nav-toggle{
+	display: block;
+}
+.nav-side{
+	display: none;
+}
+.navbar #close-sidenav{
+	display: block;
+}
+.container{
+	width: 100% !important;
+	max-width: 100% !important;
+	position: static;
+	padding: 0 !important;
+	margin: auto;
+	margin-top: 60px;
+}
+.sales{
+	width: 90%;
+	height: auto;
+	position: absolute;
+	top: 60px;
+	padding: 0 5%;
+}
+.sales h2{
+	font-size: 20px;
+	text-align: left;
+	margin-left: 8px;
+}
+.cart,
+.checkout{
+	background: #ffffff;
+	/* border-radius: 3px; */
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+.cart{
+	margin-bottom: 30px;
+}
+.cart .table .thead .trow{
+	padding-bottom: 8px;
+}
+.cart .table .tbody .trow{
+	padding: 12px 0 8px 0;
+	border-top: 1.5px #cecece solid;
+}
+.cart .table .tbody .trow:nth-child(odd){
+	background: #ffffff;
+	box-shadow: unset;
+}
+.tdata:nth-child(1){
+	flex: 10%; 
+	text-align: center;
+}
+.tdata:nth-child(2){
+	flex: 25%;
+	text-align: center;
+}
+.tdata:nth-child(3){
+	flex: 25%;
+	text-align: center;
+}
+.tdata:nth-child(4){
+	flex: 15%;
+	text-align: center;
+}
+.tdata:nth-child(5){
+	flex: 15%; 
+	text-align: center;
+}
+.tdata:nth-child(6){
+	flex: 10%; 
+	text-align: center;
+}
+.tdata button{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	border: 0;
+	border-radius: 2px;
+	background-color: #1f1e2e;
+}
+.tdata button span{
+	font-size: 12px;
+	color: #ffffff;
+	margin-left: -3px;
+}
+.checkout{
+	width: 100%;
+	top: 95px;
+	padding: 10px 20px;
+}
+.checkout input{
+	width: 100%;
+	border-radius: 3px;
+	border: 1.5px #cecece solid;
+	background-color: #ffffff;
+	padding: 5px 8px;
+}
+.checkout .btn-pr{
+	border-radius: 3px;
+	margin-top: 25px;
+	padding: 5px 8px;
+}
+.checkout p{
+	padding: 0;
+	margin: 8px 0 0 0;
+}
+.checkout .prices p{
+	margin: 0;
+	padding: 5px 0;
+	font-size: 11px;
+	border-bottom: 1.5px #cecece solid;
+}
+.checkout .prices p:nth-child(1){
+	margin-top: 15px;
+	border-top: 1.5px #cecece solid;
+}
+.checkout .prices p span{
+	font-size: 22px;
+	font-family: 'Abril Fatface', cursive;
+}
+.autocomplete {
+	width: 100%;
+}
+.autocomplete-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	border-bottom: none;
+	border-top: none;
+	z-index: 99;
+	/*position the autocomplete items to be the same width as the container:*/
+	top: 100%;
+	left: 0;
+	right: 0;
+}
+.autocomplete-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+	/*when hovering an item:*/
+	background-color: #e9e9e9;
+}
+.autocomplete-active {
+	/*when navigating through the items using the arrow keys:*/
+	background-color: DodgerBlue !important;
+	color: #ffffff;
+}

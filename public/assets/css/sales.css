@@ -1,0 +1,43 @@
+/* sales */
+.sales{
+	width: 100%;
+	height: auto;
+	background: #ffffff;
+	/* border-radius: 3px; */
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.sales h2{
+	font-size: 20px;
+	text-align: left;
+	margin-left: 18px;
+}
+.sales .btn-pr{
+	width: auto;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	margin: 0;
+}
+.sales .tdata:nth-child(1){
+	flex: 5%; 
+	padding-left: 10px;
+}
+.sales .tdata:nth-child(2){
+	flex: 15%;
+}
+.sales .tdata:nth-child(3){
+	flex: 15%;
+}
+.sales .tdata:nth-child(4){
+	flex: 15%; 
+}
+.sales .tdata:nth-child(5){
+	flex: 15%; 
+}
+.sales .tdata:nth-child(6){
+	flex: 20%; 
+}
+.sales .tdata:nth-child(7){
+	flex: 15%; 
+}
