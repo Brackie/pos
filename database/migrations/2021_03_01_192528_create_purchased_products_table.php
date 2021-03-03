@@ -15,8 +15,8 @@ class CreatePurchasedProductsTable extends Migration
     {
         Schema::create('purchased_products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id');
-            $table->foreignId('invoice_id');
+            $table->foreignId('product_id')->constrained();
+            $table->foreignId('invoice_id')->constrained();
             $table->integer('number_of_items');
             $table->timestamps();
         });
