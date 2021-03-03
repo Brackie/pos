@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="sales">
-        <h2>Sales Cart</h2>
+        <h2>Sales</h2>
         <div class="row">
             <div class="flex-bg-70">
                 <div class="cart">

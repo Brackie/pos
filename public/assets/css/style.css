@@ -160,6 +160,7 @@
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	flex-grow: 1;
 }
 .table .tdata span{
 	margin: 0 10px;

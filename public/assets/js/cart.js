@@ -57,6 +57,7 @@ function addRow(product) {
 
 function addCartItem(product) {
 	product.quantity = 1;
+	if(isEmptyObject(cartItems)) $('#cart-body').empty();
 	if (!cartItems.hasOwnProperty(product.id)) {
 		cartItems[product.id] = product;
 		localStorage.setItem('cart', JSON.stringify(cartItems));
