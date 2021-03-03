@@ -40,8 +40,8 @@
                         <span class="fa fa-home"></span>Dashboard</a></li>
                     <li><a href="/invoices" class="nav-link" id="invoices">
                         <span class="fa fa-book"></span>Invoices</a></li>
-                    <li><a href="/cart" class="nav-link" id="cart">
-                        <span class="fa fa-shopping-cart"></span>Cart</a></li>
+                    <li><a href="/cart" class="nav-link" id="sales">
+                        <span class="fa fa-keyboard-o"></span>Sales</a></li>
                     <li><a href="/create/product" class="nav-link" id="create">
                         <span class="fa fa-plus-square"></span>Add Inventory</a></li>
                 </ul>
