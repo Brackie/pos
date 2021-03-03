@@ -21,8 +21,13 @@ class PagesController extends Controller
     }
 
     public function cart(){
-    	$page = "cart";
+    	$page = "sales";
     	return view('cart', compact('page'));
+    }
+
+    public function invoice_items($id){
+    	$page = "items";
+    	return view('items', compact('page', 'id'));
     }
 
     public function get_all_products(){
@@ -31,7 +36,7 @@ class PagesController extends Controller
             "status" => 1,
             "message" => "Success!",
             "items" => $products
-        ]);
+        ], 200);
     }
 
     public function get_all_invoices(){
@@ -40,7 +45,20 @@ class PagesController extends Controller
             "status" => 1,
             "message" => "Success!",
             "items" => $invoices
-        ]);
+        ], 200);
+    }
+
+    public function get_items($id){
+        $items = DB::table('purchased_products')
+                    ->where('invoice_id', $id)
+                    ->join('products', 'purchased_products.product_id', '=', 'products.id')
+                    ->get();
+
+        return response()->json([
+            "status" => 1,
+            "message" => "Success!",
+            "items" => $items
+        ], 200);
     }
 
     public function create_product(){
@@ -70,13 +88,13 @@ class PagesController extends Controller
             return response()->json([
                 "status" => 0,
                 "message" => "Item not posted!"
-            ]);
+            ], 500);
         }
 
         return response()->json([
             "status" => 1,
             "message" => "Item posted successfully!"
-        ]);
+        ], 200);
     }
 
     public function search(Request $request)
@@ -86,7 +104,7 @@ class PagesController extends Controller
             "status" => 1,
             "message" => "Success!",
             "items" => $products
-        ]);
+        ], 200);
     }
 
     public function store_sale(Request $request)
@@ -123,14 +141,14 @@ class PagesController extends Controller
                 return response()->json([
                     "status" => 0,
                     "message" => "Insufficient stock for " . $item['product_name'] . "!"
-                ]);  
+                ], 409);
             }
         }
 
         return response()->json([
             "status" => 1,
             "message" => "Sale posted successfully!"
-        ]);   
+        ], 200);   
     }
 
     public function pay_invoice(Request $request)
@@ -151,13 +169,13 @@ class PagesController extends Controller
             return response()->json([
                 "status" => 0,
                 "message" => "Invoice status not updated!"
-            ]); 
+            ], 500); 
         }
 
         return response()->json([
             "status" => 1,
             "message" => "Paid!"
-        ]);   
+        ], 500);   
     }
 
 }

@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">  
     <link rel="stylesheet" href="{{asset('assets/css/dashboard.css')}}">  
     <link rel="stylesheet" href="{{asset('assets/css/inventory.css')}}">
+    
 @endsection
 
 @section('content')   
 
 <div class="inventory">
-        <h2>Inventory</h2>
+        <h2>Invoices</h2>
         <div class="table">
             <div class="thead">
                 <div class="trow">
                     <p class="tdata">ID</p>
                     <p class="tdata">Total</p>
                     <p class="tdata">Paid</p>
+                    <p class="tdata"></p>
                     <p class="tdata"></p>
                 </div>
             </div>
@@ -59,9 +61,14 @@
                 let div = `<div class="trow" id="invoice_${item.id}">
                     <p class="tdata">${item.id}</p>
                     <p class="tdata">${item.total}</p>
-                    <p class="tdata">${item.paid}</p>
-                    <p class="tdata"><button class="pay" id="${item.id}">Pay</button></p>
-                </div>`;
+                    <p class="tdata">${item.paid}</p>`;
+                if(item.paid == 'false') {
+                    div += `<p class="tdata"><button class="pay" id="${item.id}">Pay</button></p>`;
+                } else {
+                    div += `<p class="tdata"><button class="pay" id="${item.id}" disabled>Pay</button></p>`;
+                }
+                div += `<p class="tdata"><button><a href="invoice/items/${item.id}">View Items</a></button></p>`;
+                div += `</div>`;
                 $('#invoices_table').append(div);
             }
         }
