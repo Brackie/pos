@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\PurchasedProducts;
 
 class Invoice extends Model
 {
@@ -12,4 +13,8 @@ class Invoice extends Model
         'total', 
         'paid'
     ];
+
+    public function items(){
+        return $this->hasMany(PurchasedProducts::class);
+    }
 }
