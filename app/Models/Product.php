@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\PurchasedProducts;
 
 class Product extends Model
 {
@@ -14,4 +15,8 @@ class Product extends Model
         'product_stock', 
         'product_price'
     ];
+
+    public function items(){
+        return $this->hasMany(PurchasedProducts::class);
+    }
 }
